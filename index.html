@@ -45,18 +45,34 @@
     background: var(--card);
     border: 1px solid var(--border);
     border-radius: 14px;
-    padding: 36px 28px 28px;
+    padding: 28px;
     text-align: center;
   }
+  header {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 28px;
+    text-align: left;
+  }
+  .photo {
+    flex: 0 0 auto;
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid var(--border);
+  }
   h1 {
-    margin: 0 0 10px;
-    font-size: 1.9rem;
+    margin: 0 0 6px;
+    font-size: 1.6rem;
+    line-height: 1.2;
     letter-spacing: -0.01em;
   }
   .title {
-    margin: 0 0 28px;
+    margin: 0;
     color: var(--muted);
-    font-size: 1rem;
+    font-size: 0.95rem;
   }
   a.btn {
     display: block;
@@ -83,17 +99,24 @@
     color: var(--muted);
     word-break: break-all;
   }
+  .mail a { color: inherit; }
 </style>
 </head>
 <body>
 <main>
-  <h1>Hugo Iteney</h1>
-  <p class="title">Ingénieur de recherche en mécanique des structures, matériaux et développement numérique</p>
+  <header>
+    <img class="photo" src="photo.jpg" alt="Photo de Hugo Iteney">
+    <div>
+      <h1>Hugo Iteney</h1>
+      <p class="title">Ingénieur de recherche en mécanique des structures, matériaux et développement numérique</p>
+    </div>
+  </header>
 
-  <a class="btn primary" href="cv.pdf">Mon CV (PDF)</a>
+  <a class="btn primary" href="cv.pdf">Mon CV</a>
   <a class="btn" href="https://www.linkedin.com/in/hugo-iteney/" target="_blank" rel="noopener">LinkedIn</a>
   <a class="btn" href="https://scholar.google.com/citations?user=z8cTV6MAAAAJ&amp;hl=fr" target="_blank" rel="noopener">Google Scholar</a>
-  
-  <p class="mail"><a href="mailto:hugo.iteney@gmail.com" style="color:inherit">hugo.iteney@gmail.com</a></p></main>
+
+  <p class="mail"><a href="mailto:hugo.iteney@gmail.com">hugo.iteney@gmail.com</a></p>
+</main>
 </body>
 </html>
